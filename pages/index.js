@@ -5,102 +5,102 @@ const flightData = {
   groupOne: {
     regions: {
       Europe: {
-        Economy: { maxPoints: 50000, maxTax: 250 },
-        "Premium Economy": { maxPoints: 80000, maxTax: 500 },
-        Business: { maxPoints: 130000, maxTax: 500 },
-        First: { maxPoints: 160000, maxTax: 500 }
+        Economy: { maxPoints: 50000, maxTax: 300 },
+        "Premium Economy": { maxPoints: 80000, maxTax: 600 },
+        Business: { maxPoints: 130000, maxTax: 600 },
+        First: { maxPoints: 160000, maxTax: 600 }
       },
       "Southern America": {
-        Economy: { maxPoints: 60000, maxTax: 250 },
-        "Premium Economy": { maxPoints: 150000, maxTax: 500 },
-        Business: { maxPoints: 200000, maxTax: 500 },
-        First: { maxPoints: 240000, maxTax: 500 }
+        Economy: { maxPoints: 60000, maxTax: 300 },
+        "Premium Economy": { maxPoints: 150000, maxTax: 600 },
+        Business: { maxPoints: 200000, maxTax: 600 },
+        First: { maxPoints: 240000, maxTax: 600 }
       },
       Asia: {
-        Economy: { maxPoints: 90000, maxTax: 250 },
-        "Premium Economy": { maxPoints: 150000, maxTax: 500 },
-        Business: { maxPoints: 200000, maxTax: 500 },
-        First: { maxPoints: 240000, maxTax: 500 }
+        Economy: { maxPoints: 90000, maxTax: 300 },
+        "Premium Economy": { maxPoints: 150000, maxTax: 600 },
+        Business: { maxPoints: 200000, maxTax: 600 },
+        First: { maxPoints: 240000, maxTax: 600 }
       },
       Africa: {
-        Economy: { maxPoints: 80000, maxTax: 250 },
-        "Premium Economy": { maxPoints: 150000, maxTax: 500 },
-        Business: { maxPoints: 200000, maxTax: 500 },
-        First: { maxPoints: 240000, maxTax: 500 }
+        Economy: { maxPoints: 80000, maxTax: 300 },
+        "Premium Economy": { maxPoints: 150000, maxTax: 600 },
+        Business: { maxPoints: 200000, maxTax: 600 },
+        First: { maxPoints: 240000, maxTax: 600 }
       },
       Oceania: {
-        Economy: { maxPoints: 90000, maxTax: 250 },
-        "Premium Economy": { maxPoints: 150000, maxTax: 500 },
-        Business: { maxPoints: 200000, maxTax: 500 },
-        First: { maxPoints: 240000, maxTax: 500 }
+        Economy: { maxPoints: 90000, maxTax: 300 },
+        "Premium Economy": { maxPoints: 150000, maxTax: 600 },
+        Business: { maxPoints: 200000, maxTax: 600 },
+        First: { maxPoints: 240000, maxTax: 600 }
       }
     }
   },
   groupTwo: {
     regions: {
       Europe: {
-        Economy: { maxPoints: 70000, maxTax: 250 },
-        "Premium Economy": { maxPoints: 80000, maxTax: 500 },
-        Business: { maxPoints: 140000, maxTax: 500 },
-        First: { maxPoints: 160000, maxTax: 500 }
+        Economy: { maxPoints: 70000, maxTax: 300 },
+        "Premium Economy": { maxPoints: 80000, maxTax: 600 },
+        Business: { maxPoints: 140000, maxTax: 600 },
+        First: { maxPoints: 160000, maxTax: 600 }
       },
       "Southern America": {
-        Economy: { maxPoints: 80000, maxTax: 250 },
-        "Premium Economy": { maxPoints: 150000, maxTax: 500 },
-        Business: { maxPoints: 200000, maxTax: 500 },
-        First: { maxPoints: 240000, maxTax: 500 }
+        Economy: { maxPoints: 80000, maxTax: 300 },
+        "Premium Economy": { maxPoints: 150000, maxTax: 600 },
+        Business: { maxPoints: 200000, maxTax: 600 },
+        First: { maxPoints: 240000, maxTax: 600 }
       },
       Asia: {
-        Economy: { maxPoints: 100000, maxTax: 250 },
-        "Premium Economy": { maxPoints: 150000, maxTax: 500 },
-        Business: { maxPoints: 200000, maxTax: 500 },
-        First: { maxPoints: 240000, maxTax: 500 }
+        Economy: { maxPoints: 100000, maxTax: 300 },
+        "Premium Economy": { maxPoints: 150000, maxTax: 600 },
+        Business: { maxPoints: 200000, maxTax: 600 },
+        First: { maxPoints: 240000, maxTax: 600 }
       },
       Africa: {
-        Economy: { maxPoints: 90000, maxTax: 250 },
-        "Premium Economy": { maxPoints: 150000, maxTax: 500 },
-        Business: { maxPoints: 200000, maxTax: 500 },
-        First: { maxPoints: 240000, maxTax: 500 }
+        Economy: { maxPoints: 90000, maxTax: 300 },
+        "Premium Economy": { maxPoints: 150000, maxTax: 600 },
+        Business: { maxPoints: 200000, maxTax: 600 },
+        First: { maxPoints: 240000, maxTax: 600 }
       },
       Oceania: {
-        Economy: { maxPoints: 100000, maxTax: 250 },
-        "Premium Economy": { maxPoints: 150000, maxTax: 500 },
-        Business: { maxPoints: 200000, maxTax: 500 },
-        First: { maxPoints: 240000, maxTax: 500 }
+        Economy: { maxPoints: 100000, maxTax: 300 },
+        "Premium Economy": { maxPoints: 150000, maxTax: 600 },
+        Business: { maxPoints: 200000, maxTax: 600 },
+        First: { maxPoints: 240000, maxTax: 600 }
       }
     }
   },
   groupThree: {
     regions: {
       Europe: {
-        Economy: { maxPoints: 70000, maxTax: 250 },
-        "Premium Economy": { maxPoints: 80000, maxTax: 500 },
-        Business: { maxPoints: 140000, maxTax: 500 },
-        First: { maxPoints: 160000, maxTax: 500 }
+        Economy: { maxPoints: 70000, maxTax: 300 },
+        "Premium Economy": { maxPoints: 80000, maxTax: 600 },
+        Business: { maxPoints: 140000, maxTax: 600 },
+        First: { maxPoints: 160000, maxTax: 600 }
       },
       "Southern America": {
-        Economy: { maxPoints: 90000, maxTax: 250 },
-        "Premium Economy": { maxPoints: 150000, maxTax: 500 },
-        Business: { maxPoints: 200000, maxTax: 500 },
-        First: { maxPoints: 240000, maxTax: 500 }
+        Economy: { maxPoints: 90000, maxTax: 300 },
+        "Premium Economy": { maxPoints: 150000, maxTax: 600 },
+        Business: { maxPoints: 200000, maxTax: 600 },
+        First: { maxPoints: 240000, maxTax: 600 }
       },
       Asia: {
-        Economy: { maxPoints: 100000, maxTax: 250 },
-        "Premium Economy": { maxPoints: 150000, maxTax: 500 },
-        Business: { maxPoints: 200000, maxTax: 500 },
-        First: { maxPoints: 240000, maxTax: 500 }
+        Economy: { maxPoints: 100000, maxTax: 300 },
+        "Premium Economy": { maxPoints: 150000, maxTax: 600 },
+        Business: { maxPoints: 200000, maxTax: 600 },
+        First: { maxPoints: 240000, maxTax: 600 }
       },
       Africa: {
-        Economy: { maxPoints: 90000, maxTax: 250 },
-        "Premium Economy": { maxPoints: 150000, maxTax: 500 },
-        Business: { maxPoints: 200000, maxTax: 500 },
-        First: { maxPoints: 240000, maxTax: 500 }
+        Economy: { maxPoints: 90000, maxTax: 300 },
+        "Premium Economy": { maxPoints: 150000, maxTax: 600 },
+        Business: { maxPoints: 200000, maxTax: 600 },
+        First: { maxPoints: 240000, maxTax: 600 }
       },
       Oceania: {
-        Economy: { maxPoints: 100000, maxTax: 250 },
-        "Premium Economy": { maxPoints: 150000, maxTax: 500 },
-        Business: { maxPoints: 200000, maxTax: 500 },
-        First: { maxPoints: 240000, maxTax: 500 }
+        Economy: { maxPoints: 100000, maxTax: 300 },
+        "Premium Economy": { maxPoints: 150000, maxTax: 600 },
+        Business: { maxPoints: 200000, maxTax: 600 },
+        First: { maxPoints: 240000, maxTax: 600 }
       }
     }
   }
