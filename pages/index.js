@@ -178,12 +178,20 @@ export default function Home() {
     </div>
     <div>
       <label>Points:</label>
-      <input type="number" value={points} onChange={(e) => setPoints(parseInt(e.target.value, 10))} />
-    </div>
+      <input
+  type="number"
+  value={points === 0 ? '' : points}
+  onChange={(e) => setPoints(e.target.value === '' ? 0 : parseInt(e.target.value, 10))}
+  placeholder="0"
+/>    </div>
     <div>
       <label>Tax:</label>
-      <input type="number" value={tax} onChange={(e) => setTax(parseFloat(e.target.value))} />
-    </div>
+      <input
+  type="number"
+  value={tax === 0 ? '' : tax}
+  onChange={(e) => setTax(e.target.value === '' ? 0 : parseFloat(e.target.value))}
+  placeholder="0"
+/>    </div>
     <button onClick={handleCheckDeal}>Check Deal</button>
     <div>
       <h2>{result}</h2>
