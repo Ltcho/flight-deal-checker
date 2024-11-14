@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import '../styles/App.css';
 
 // Flight data (based strictly on Excel data)
 const flightData = {
@@ -234,7 +233,6 @@ export default function Home() {
     <div>
       <h2>{result}</h2>
     </div>
-    <div className="watermark">LH</div>
   </div>
   );
 }
