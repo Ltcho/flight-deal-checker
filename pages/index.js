@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import './App.css';
 
 // Flight data (based strictly on Excel data)
 const flightData = {
@@ -103,6 +104,40 @@ const flightData = {
         First: { maxPoints: 240000, maxTax: 600 }
       }
     }
+  },
+  groupFour: {
+    regions: {
+      Europe: {
+        Economy: { maxPoints: 80000, maxTax: 300 },
+        "Premium Economy": { maxPoints: 96000, maxTax: 600 },
+        Business: { maxPoints: 168000, maxTax: 600 },
+        First: { maxPoints: 192000, maxTax: 600 }
+      },
+      "Southern America": {
+        Economy: { maxPoints: 100000, maxTax: 300 },
+        "Premium Economy": { maxPoints: 180000, maxTax: 600 },
+        Business: { maxPoints: 240000, maxTax: 600 },
+        First: { maxPoints: 288000, maxTax: 600 }
+      },
+      Asia: {
+        Economy: { maxPoints: 120000, maxTax: 300 },
+        "Premium Economy": { maxPoints: 180000, maxTax: 600 },
+        Business: { maxPoints: 240000, maxTax: 600 },
+        First: { maxPoints: 288000, maxTax: 600 }
+      },
+      Africa: {
+        Economy: { maxPoints: 108000, maxTax: 300 },
+        "Premium Economy": { maxPoints: 180000, maxTax: 600 },
+        Business: { maxPoints: 240000, maxTax: 600 },
+        First: { maxPoints: 288000, maxTax: 600 }
+      },
+      Oceania: {
+        Economy: { maxPoints: 120000, maxTax: 300 },
+        "Premium Economy": { maxPoints: 180000, maxTax: 600 },
+        Business: { maxPoints: 250000, maxTax: 600 },
+        First: { maxPoints: 288000, maxTax: 600 }
+      }
+    }
   }
 };
 
@@ -110,7 +145,8 @@ const flightData = {
 const airportGroups = {
   groupOne: ['ATL', 'BOS', 'DFW', 'DTW', 'EWR', 'IAD', 'IAH', 'JFK', 'LAX', 'LGA', 'MIA', 'ORD', 'SFO'],
   groupTwo: ['AUS', 'CLT', 'CLE', 'CVG', 'DEN', 'LAS', 'MCO', 'MSP', 'PDX', 'PHL', 'PHX', 'RDU', 'SAN', 'SEA', 'SLC', 'TPA'],
-  groupThree: ['BHM', 'BNA', 'BUR', 'BWI', 'CHA', 'DAL', 'DCA', 'FLL', 'GSP', 'HOU', 'IND', 'LGB', 'MCI', 'MDW', 'MKE', 'OAK', 'ONT', 'SAT', 'SJC', 'SMF', 'SNA']
+  groupThree: ['BHM', 'BNA', 'BUR', 'BWI', 'CHA', 'DAL', 'DCA', 'FLL', 'GSP', 'HOU', 'IND', 'LGB', 'MCI', 'MDW', 'MKE', 'OAK', 'ONT', 'SAT', 'SJC', 'SMF', 'SNA'],
+  groupFour: ['ABE', 'ABQ', 'AGS', 'ALB', 'AMA', 'ANC', 'ASE', 'ATW', 'AVL', 'BDL', 'BIL', 'BLI', 'BMI', 'BOI', 'BTV', 'BUF', 'BZN', 'CAE', 'CAK', 'CHO', 'CHS', 'CID', 'CMH', 'CMI', 'COD', 'COS', 'CRP', 'CRW', 'CYS', 'DAB', 'DAY', 'DLH', 'DRO', 'DSM', 'ECP', 'EGE', 'ELP', 'EUG', 'EVV', 'EWN', 'EYW', 'FAR', 'FAT', 'FAY', 'FCA', 'FSD', 'FWA', 'GEG', 'GJT', 'GPT', 'GRB', 'GRR', 'GSO', 'GTF', 'GUM', 'HHH', 'HNL', 'HPN', 'HSV', 'HVN', 'ICT', 'ILM', 'ISP', 'ITO', 'JAC', 'JAN', 'JAX', 'JNU', 'KOA', 'LEX', 'LIH', 'LIT', 'LNK', 'LYH', 'MDT', 'MEM', 'MFE', 'MFR', 'MHT', 'MLB', 'MLI', 'MOB', 'MOT', 'MQT', 'MSN', 'MSO', 'MSY', 'MTJ', 'MYR', 'OAJ', 'OGG', 'OKC', 'OMA', 'ORF', 'ORH', 'PAE', 'PBI', 'PIA', 'PIT', 'PNS', 'PSC', 'PSP', 'PVD', 'PVU', 'PWM', 'RAP', 'RDM', 'RIC', 'RNO', 'ROA', 'ROC', 'RST', 'RSW', 'SAF', 'SAV', 'SBA', 'SBN', 'SDF', 'SFB', 'SGF', 'SHV', 'SJU', 'SRQ', 'STL', 'STS', 'STT', 'SUN', 'SWF', 'SYR', 'TLH', 'TUL', 'TUS', 'TWF', 'TYS', 'VPS', 'XNA', 'YUM']
 };
 
 export default function Home() {
@@ -130,6 +166,8 @@ export default function Home() {
       group = 'groupTwo';
     } else if (airportGroups.groupThree.includes(airport)) {
       group = 'groupThree';
+    } else if (airportGroups.groupFour.includes(airport)) { // Add this check
+      group = 'groupFour';
     }
 
     // If airport, region, or fare class is invalid
@@ -152,7 +190,7 @@ export default function Home() {
 
   return (
     <div>
-      <h1>Flight Deal Checker</h1>
+      <h1>Enter roundtrip award rate and tax to check if it's a good deal</h1>
       <div>
         <label>Airport:</label>
         <input type="text" value={airport} onChange={(e) => setAirport(e.target.value.toUpperCase())} />
@@ -192,10 +230,11 @@ export default function Home() {
   onChange={(e) => setTax(e.target.value === '' ? 0 : parseFloat(e.target.value))}
   placeholder="0"
 />    </div>
-    <button onClick={handleCheckDeal}>Check Deal</button>
+<button className="check-deal-button" onClick={handleCheckDeal}>Check Deal</button>
     <div>
       <h2>{result}</h2>
     </div>
+    <div className="watermark">LH</div>
   </div>
   );
 }
