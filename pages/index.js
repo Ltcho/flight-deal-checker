@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import '../styles/App.css';
 
 // Flight data (based strictly on Excel data)
 const flightData = {
