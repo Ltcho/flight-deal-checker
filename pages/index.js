@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 // Flight data (based strictly on Excel data)
 const flightData = {
@@ -156,7 +156,12 @@ export default function Home() {
   const [tax, setTax] = useState(0);
   const [result, setResult] = useState('');
 
-  const handleCheckDeal = () => {
+// Clear result when any input field changes
+useEffect(() => {
+  setResult('');
+}, [airport, region, fareClass, points, tax]);
+
+const handleCheckDeal = () => {
     let group = '';
     // Determine airport group
     if (airportGroups.groupOne.includes(airport)) {
@@ -189,7 +194,7 @@ export default function Home() {
 
   return (
     <div>
-      <h1>Enter roundtrip award rate and tax to check if it's a good deal</h1>
+      <h1>Enter award rate and tax to check if it's a good deal</h1>
       <div>
         <label>Airport:</label>
         <input type="text" value={airport} onChange={(e) => setAirport(e.target.value.toUpperCase())} />
@@ -229,7 +234,7 @@ export default function Home() {
   onChange={(e) => setTax(e.target.value === '' ? 0 : parseFloat(e.target.value))}
   placeholder="0"
 />    </div>
-<button className="check-deal-button" onClick={handleCheckDeal}>Check Deal</button>
+    <button onClick={handleCheckDeal}>Check Deal</button>
     <div>
       <h2>{result}</h2>
     </div>
