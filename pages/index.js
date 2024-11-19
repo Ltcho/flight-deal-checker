@@ -194,7 +194,7 @@ const handleCheckDeal = () => {
 
   return (
     <div>
-      <h1>Enter award rate and tax to check if it's a good deal</h1>
+      <h1>Enter roundtrip award rate and tax to check if it's a good deal</h1>
       <div>
         <label>Airport:</label>
         <input type="text" value={airport} onChange={(e) => setAirport(e.target.value.toUpperCase())} />
